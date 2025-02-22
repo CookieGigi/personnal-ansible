@@ -1,3 +1,4 @@
+# Install the basic for ansible
 init:
 	make base
 
@@ -14,3 +15,7 @@ python:
 ansible:
 	pipx install --include-deps ansible
 	pipx ensurepath
+
+# Install with ansible
+install:
+	sudo ansible-playbook install.yaml --tags all
