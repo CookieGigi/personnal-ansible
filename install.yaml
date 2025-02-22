@@ -18,6 +18,14 @@
         - python3
         - stow
 
+    # Dotfile
+    - name: Clone dotfile directory 
+      ansible.builtin.git:
+        repo: "https://github.com/CookieGigi/dotfile.git"
+        dest: $HOME/dotfile
+    - name: Stow dotfile
+      ansible.builtin.command: stow -d $HOME/dotfile/ .
+
     # Cargo
     - name: check if cargo is installed
       shell: command -v cargo
