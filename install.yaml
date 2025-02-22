@@ -7,6 +7,17 @@
       with_items:
         - htop
         - curl
+        # alacritty dependency
+        - cmake 
+        - g++ 
+        - pkg-config 
+        - libfreetype6-dev 
+        - libfontconfig1-dev 
+        - libxcb-xfixes0-dev 
+        - libxkbcommon-dev
+        - python3
+        - stow
+
     # Cargo
     - name: check if cargo is installed
       shell: command -v cargo
@@ -26,5 +37,12 @@
       shell: /tmp/sh.rustup.rs -y
       tags:
         - rust
+
+    # Cargo packages
+    - name: Cargo packages
+      community.general.cargo:
+        executable: ~/.cargo/bin/cargo
+        name:
+          - alacritty
 
 

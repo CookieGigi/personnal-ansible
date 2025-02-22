@@ -18,4 +18,5 @@ ansible:
 
 # Install with ansible
 install:
+	ansible-galaxy collection install community.general
 	ansible-playbook install.yaml --tags all
