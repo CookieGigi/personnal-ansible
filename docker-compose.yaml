@@ -1,0 +1,7 @@
+services:
+  ubuntu:
+    image : ubuntu
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/ansible
