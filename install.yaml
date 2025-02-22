@@ -1,5 +1,7 @@
 - hosts: localhost
   become: true
   tasks: 
-    - name: htop
-      apt: name=htop
+    - name: Install packages
+      apt: name={{item}}
+      with_items:
+        -htop
