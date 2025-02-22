@@ -18,4 +18,4 @@ ansible:
 
 # Install with ansible
 install:
-	sudo ansible-playbook install.yaml --tags all
+	ansible-playbook install.yaml --tags all
