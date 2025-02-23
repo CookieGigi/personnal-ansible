@@ -9,6 +9,7 @@
         - curl
         - wget
         - unzip
+        - fontconfig
         # alacritty dependency
         - cmake 
         - g++ 
@@ -55,4 +56,13 @@
         name:
           - alacritty
 
+    # Nerd font
+    - name: Create dir
+      command: mkdir -p $HOME/.local/share/fonts/
+    - name: Install NerdFont
+      include_tasks: font.yaml 
+      with_items:
+        - JetBrainsMono
+    - name: Refresh Font Cache 
+      command: fc-cache -fv
 
