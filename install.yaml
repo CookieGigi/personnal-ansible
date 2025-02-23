@@ -23,6 +23,8 @@
         # zsh
         - zsh
         - fzf
+        # tmux
+        - tmux
 
     # Dotfile
     - name: Clone dotfile directory 
