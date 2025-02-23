@@ -1,0 +1,14 @@
+- name: check if installed
+  shell: command -v {{item.pathcommand}}
+  register: exists
+  ignore_errors: yes
+- name: Download Installer
+  when: exists is failed
+  get_url:
+    url: "{{item.url}}"
+    dest: /tmp/sh.{{item.name}}.rs
+    mode: '0755'
+    force: 'yes'
+- name: install 
+  when: exists is failed
+  shell: /tmp/sh.{{item.name}}.rs {{item.arg}}
