@@ -20,6 +20,9 @@
         - libxkbcommon-dev
         - python3
         - stow
+        # zsh
+        - zsh
+        - fzf
 
     # Dotfile
     - name: Clone dotfile directory 
@@ -55,6 +58,25 @@
         executable: ~/.cargo/bin/cargo
         name:
           - alacritty
+    # Oh my zsh
+    - name: Clone oh my zsh
+      ansible.builtin.git:
+        repo: "https://github.com/ohmyzsh/ohmyzsh.git"
+        dest: $HOME/.oh-my-zsh
+    - name: Set default shell
+      ansible.builtin.command: chsh -s /usr/bin/zsh
+
+    # ZSH Plugin
+    - name: Install ZSH plugin
+      ansible.builtin.git:
+        repo: "{{item.url}}"
+        dest: $HOME/.oh-my-zsh/plugins/{{item.name}}
+      with_items:
+        - name: zsh-syntax-highlighting
+          url: https://github.com/zsh-users/zsh-syntax-highlighting.git
+        - name: zsh-autosuggestions
+          url: https://github.com/zsh-users/zsh-autosuggestions.git
+
 
     # Nerd font
     - name: Create dir
