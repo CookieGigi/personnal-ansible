@@ -27,3 +27,8 @@ sudo apt install -y make
 ```
 make init
 ```
+
+### Command when using docker
+```
+apt update && apt upgrade -y && apt install -y sudo make git && cd ansible/ && make init
+```
