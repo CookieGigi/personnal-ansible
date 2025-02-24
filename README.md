@@ -31,6 +31,7 @@ make init
 ### Install with ansible
 
 ```
+source ~/.bashrc
 make install
 ```
 
