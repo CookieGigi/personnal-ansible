@@ -42,10 +42,6 @@
           url: https://sh.rustup.rs 
           arg: -y
           pathcommand: $HOME/.cargo/bin/cargo
-        - name: brew
-          url: https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
-          arg: ""
-          pathcommand: /home/linuxbrew/.linuxbrew/bin/brew
         
     # Cargo packages
     - name: Cargo packages
