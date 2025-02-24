@@ -13,7 +13,7 @@ sudo apt install -y git
 
 ### Clone
 ```
-https://github.com/CookieGigi/personnal-ansible.git
+git clone https://github.com/CookieGigi/personnal-ansible.git
 cd personnal-ansible
 ```
 
@@ -26,6 +26,18 @@ sudo apt install -y make
 
 ```
 make init
+```
+
+### Install with ansible
+
+```
+make install
+```
+
+### Install linux brew
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ### Command when using docker
