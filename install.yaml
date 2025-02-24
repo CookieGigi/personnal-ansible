@@ -58,6 +58,7 @@
         repo: "https://github.com/ohmyzsh/ohmyzsh.git"
         dest: $HOME/.oh-my-zsh
     - name: Set default shell
+      become: true
       ansible.builtin.command: chsh -s /usr/bin/zsh
 
     # ZSH Plugin
