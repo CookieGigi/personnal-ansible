@@ -12,3 +12,9 @@
     - role: alacritty
       tags:
         - alacritty
+    - role: dotfile
+      tags:
+        - dotfile
+    - role: zsh
+      tags:
+        - zsh
