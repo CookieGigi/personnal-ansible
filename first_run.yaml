@@ -27,3 +27,7 @@
     - role: node
       tags:
         - node
+    - role: dotnet
+      tags:
+        - dotnet
+
