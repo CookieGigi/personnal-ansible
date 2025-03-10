@@ -101,6 +101,11 @@
           url: https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
           pathcommand: zoxide
           arg: ""
+        - name: tailscale
+          url: https://tailscale.com/install.sh
+          pathcommand: tailscale
+          arg: ""
+      
     # Dotfile
     - name: Clone dotfile directory 
       ansible.builtin.git:
