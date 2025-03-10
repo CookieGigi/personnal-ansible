@@ -68,6 +68,21 @@
           # android debug
           - adb
 
+    # Snap
+    - name: Install Snap Classic Package
+      become: true
+      community.general.snap:
+        classic: true
+        name:
+          - obsidian
+          - nvim 
+          - codium
+    - name: Install Snap package
+      become: true
+      community.general.snap:
+        name:
+          - steam
+
     # Install local script
     - name: Install eza
       script: "{{item}}"
