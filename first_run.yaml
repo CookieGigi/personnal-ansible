@@ -3,3 +3,6 @@
     - role: base
       tags:
         - base
+    - role: fonts
+      tags:
+        - fonts

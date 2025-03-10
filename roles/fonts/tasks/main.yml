@@ -1,0 +1,11 @@
+- name: "Install fontconfig"
+  apt:
+    name: "fontconfig"
+- name: Create dir to store font
+  command: mkdir -p $HOME/.local/share/fonts/
+- name: Install NerdFont
+  include_tasks: font.yaml 
+  with_items:
+    - JetBrainsMono
+- name: Refresh Font Cache 
+  command: fc-cache -fv
