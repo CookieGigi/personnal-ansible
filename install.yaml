@@ -4,6 +4,9 @@
     - name: Install packages
       become: true
       apt: name={{item}}
+    # Install local script
+    - name: Install eza
+      script: "{{item}}"
       with_items:
         - htop
         - curl
@@ -25,6 +28,7 @@
         - fzf
         # tmux
         - tmux
+        - "./eza_install.sh"
 
     # Dotfile
     - name: Clone dotfile directory 
