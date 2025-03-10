@@ -192,6 +192,11 @@
         dest: ~/.config/tmux/plugins/catppuccin/tmux
         version: v2.1.2
 
+    # Neovim
+    - name: JSRegexp for luasnip
+      become: true
+      command: sudo luarocks install jsregexp
+
     # Gnome
     - name: Setup gnome
       include_tasks: gnome.yaml
