@@ -13,10 +13,9 @@
     classic: true
     name:
       - nvim
-
 - name: Install language servers
   community.general.npm:
-    name: "{{item}}" 
+    name: "{{item}}"
     global: true
   with_items:
     - vscode-langservers-extracted 

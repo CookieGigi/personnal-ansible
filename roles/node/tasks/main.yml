@@ -1,4 +1,4 @@
 - name: "Install node"
   script:
     cmd: "node_install.sh"
-    creates: /home/cookiegigi/.nvm/versions/node/v22.14.0/bin/node
+    creates: $HOME/.nvm/versions/node/v22.14.0/bin/node
