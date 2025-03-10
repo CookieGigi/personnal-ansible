@@ -46,4 +46,7 @@
     - role: flatpak
       tags:
         - flatpak
+    - role: android
+      tags:
+        - android
 

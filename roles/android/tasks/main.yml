@@ -1,0 +1,17 @@
+- name: "Install android debug"
+  become: true
+  apt:
+    name: adb
+
+- name : Android studio dependencies
+  become: true
+  apt:
+    name:
+      - openjdk-11-jdk
+      # Hardware acceleration
+      - qemu-kvm 
+      - libvirt-daemon-system 
+      - libvirt-clients
+      - bridge-utils
+
+
