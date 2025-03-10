@@ -1,0 +1,8 @@
+- name: Install tailscale
+  include_role: 
+    name: install_from_remote_script 
+  vars:
+    name: tailscale
+    url: https://tailscale.com/install.sh 
+    pathcommand: tailscale
+    arg: ""

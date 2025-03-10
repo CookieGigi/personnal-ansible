@@ -58,4 +58,7 @@
     - role: steam
       tags:
         - steam
+    - role: tailscale
+      tags:
+        - tailscale
 
