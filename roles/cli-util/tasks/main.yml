@@ -1,0 +1,22 @@
+- name: "Install ripgrep"
+  apt:
+    name: "ripgrep"
+- name: "Install fzf"
+  apt:
+    name: "fzf"
+- name: "Install fd-find"
+  apt:
+    name: "fd-find"
+
+- name: Install eza
+  become: true
+  script: "./eza_install.sh" 
+
+- name: Install zoxide
+  include_role: 
+    name: install_from_remote_script 
+  vars:
+    name: zoxide
+    url: https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
+    pathcommand: zoxide
+    arg: ""

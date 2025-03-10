@@ -6,3 +6,6 @@
     - role: fonts
       tags:
         - fonts
+    - role: cli-util
+      tags:
+        - cli-util
