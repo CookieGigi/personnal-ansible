@@ -1,0 +1,13 @@
+- name: "Install tmux"
+  apt:
+    name: "tmux"
+#Tmux plugin manager
+- name: Install tmux plugin manager
+  ansible.builtin.git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: ~/.tmux/plugins/tpm
+- name: Tmux catpuccin
+  ansible.builtin.git:
+    repo: https://github.com/catppuccin/tmux.git
+    dest: ~/.config/tmux/plugins/catppuccin/tmux
+    version: v2.1.2
