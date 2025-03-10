@@ -55,4 +55,7 @@
     - role: codium
       tags:
         - codium
+    - role: steam
+      tags:
+        - steam
 
