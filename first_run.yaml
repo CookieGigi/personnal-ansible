@@ -24,3 +24,6 @@
     - role: lazygit
       tags: 
         - lazygit
+    - role: node
+      tags:
+        - node
