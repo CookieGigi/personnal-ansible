@@ -39,5 +39,8 @@
         - neovim
     - role: tlp
       tags:
-        tlp
+        - tlp
+    - role: gnome
+      tags:
+        - gnome
 

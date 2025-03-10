@@ -1,0 +1,53 @@
+- name: "Install gnome extension manager"
+  become: true
+  apt:
+    name:
+      - gnome-shell-extensions
+      - gnome-shell-extension-manager
+
+- name: Install pipx package
+  command : pipx install {{item}}
+  with_items: 
+    - gnome-extensions
+  ignore_errors: yes
+ # Shortcut
+- name: "Settings dark color-scheme"
+  community.general.dconf:
+    key: "{{item.key}}"
+    value: "{{item.value}}"
+  with_items:
+    - key: "/org/gnome/desktop/interface/color-scheme"
+      value: "'prefer-dark'"
+    - key: "/org/gnome/desktop/interface/gtk-theme"
+      value: "'Yaru-dark'" 
+    - key: "/org/gnome/shell/extensions/dash-to-dock/dock-fixed"
+      value: "false"
+    - key: /org/gnome/desktop/wm/keybindings/switch-to-workspace-left
+      value: "['<Super>Up']"
+    - key: /org/gnome/desktop/wm/keybindings/switch-to-workspace-right
+      value: "['<Super>Down']"
+    - key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-right"
+      value: "'unset'"
+    - key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left"
+      value: "'unset'"
+    - key: "/org/gnome/shell/extensions/tiling-assistant/overridden-settings"
+      value: "'unset'"
+    - key: "/org/gnome/shell/extensions/auto-move-windows/application-list"
+      value: "['Alacritty.desktop:1', 'firefox_firefox.desktop:2', 'obsidian_obsidian.desktop:3']"
+    - key: "/org/gnome/desktop/a11y.applications/screen-keyboard-enabled"
+      value: "false"
+
+    
+  tags:
+    - gnome
+- name: install extensions
+  become: true
+  script: ./gnome_extensions_install.sh
+  tags:
+    - gnome
+- name: enable extensions
+  dconf:
+    key: "/org/gnome/shell/enabled-extensions"
+    value: "['ding@rastersoft.com', 'ubuntu-dock@ubuntu.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']"
+  tags:
+    - gnome    
