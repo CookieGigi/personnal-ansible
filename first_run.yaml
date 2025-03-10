@@ -1,3 +1,5 @@
 - hosts: localhost
   roles:
-    - base
+    - role: base
+      tags:
+        - base
