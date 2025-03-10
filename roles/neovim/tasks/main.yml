@@ -1,0 +1,14 @@
+- name: "Install neovim dependencies"
+  apt:
+    name: 
+      - luarocks 
+      - libreadline-dev 
+      - libssl-dev
+      - xclip
+- name: Install Snap Classic Package
+  become: true
+  community.general.snap:
+    classic: true
+    name:
+      - nvim
+

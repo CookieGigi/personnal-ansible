@@ -1,0 +1,4 @@
+- name: "Install lazygit"
+  script: 
+    cmd: "lazygit_install.sh"
+    creates: /usr/local/bin/lazygit

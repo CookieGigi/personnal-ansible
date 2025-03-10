@@ -21,3 +21,6 @@
     - role: tmux
       tags:
         - tmux
+    - role: lazygit
+      tags: 
+        - lazygit
