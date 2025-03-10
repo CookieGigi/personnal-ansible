@@ -33,4 +33,7 @@
     - role: pipx
       tags:
         - pipx
+    - role: neovim
+      tags: 
+        - neovim
 

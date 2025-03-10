@@ -5,6 +5,7 @@
       - libreadline-dev 
       - libssl-dev
       - xclip
+
 - name: Install Snap Classic Package
   become: true
   community.general.snap:
@@ -12,3 +13,29 @@
     name:
       - nvim
 
+- name: Install language servers
+  community.general.npm:
+    name: "{{item}}" 
+    global: true
+  with_items:
+    - vscode-langservers-extracted 
+    - dockerfile-language-server-nodejs
+    - typescript
+    - typescript-language-server
+    - "@tailwindcss/language-server"
+
+- name: Install csharp-ls
+  command: "dotnet tool install --global {{item}}"
+  ignore_errors: yes
+  with_items:
+    - csharp-ls
+
+- name: Install python lsp
+  command : pipx install {{item}}
+  with_items: 
+    - python-lsp-server
+  ignore_errors: yes
+
+- name: JSRegexp for luasnip
+  become: true
+  command: sudo luarocks install jsregexp
