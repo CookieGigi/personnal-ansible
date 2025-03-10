@@ -1,3 +1,4 @@
 - name: "Install dotnet sdk"
+  become: true
   apt:
     name : dotnet-sdk-8.0

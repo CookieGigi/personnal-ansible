@@ -1,4 +1,5 @@
 - name: "Install fontconfig"
+  become: true
   apt:
     name: "fontconfig"
 - name: Create dir to store font

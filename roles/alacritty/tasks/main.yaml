@@ -1,4 +1,5 @@
 - name: "Install alacritty and dependencies"
+  become: true
   apt:
     name:
       - cmake 

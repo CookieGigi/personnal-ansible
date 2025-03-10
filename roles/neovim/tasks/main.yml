@@ -1,4 +1,5 @@
 - name: "Install neovim dependencies"
+  become: true
   apt:
     name: 
       - luarocks 

@@ -1,4 +1,5 @@
 - name: "Install Stow"
+  become: true
   apt:
     name: "stow"
 - name: Clone dotfile directory 
