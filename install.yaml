@@ -86,4 +86,9 @@
         - JetBrainsMono
     - name: Refresh Font Cache 
       command: fc-cache -fv
+    # Gnome
+    - name: Setup gnome
+      include_tasks: gnome.yaml
+      tags:
+        - gnome
 
