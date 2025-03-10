@@ -43,4 +43,7 @@
     - role: gnome
       tags:
         - gnome
+    - role: flatpak
+      tags:
+        - flatpak
 
