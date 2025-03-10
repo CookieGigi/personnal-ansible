@@ -39,6 +39,7 @@ make install
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install lua-language-server
 ```
 
 ### Command when using docker
