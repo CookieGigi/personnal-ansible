@@ -124,7 +124,20 @@
           - tree-sitter-cli
           - htmx-lsp
         locked: true
-    
+
+    # npm package
+    - name: Install node.js package globally.
+      community.general.npm:
+        name: "{{item}}" 
+        global: true
+      with_items:
+        - vscode-langservers-extracted 
+        - dockerfile-language-server-nodejs
+        - typescript
+        - typescript-language-server
+        - "@tailwindcss/language-server"
+
+        
     # Oh my zsh
     - name: Clone oh my zsh
       ansible.builtin.git:
