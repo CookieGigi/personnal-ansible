@@ -19,31 +19,33 @@
     # Package
     - name: Install packages
       become: true
-      apt: name={{item}}
+      apt: 
+        name: 
+          - htop
+          - curl
+          - wget
+          - unzip
+          - fontconfig
+          # alacritty
+          - cmake 
+          - g++ 
+          - pkg-config 
+          - libfreetype6-dev 
+          - libfontconfig1-dev 
+          - libxcb-xfixes0-dev 
+          - libxkbcommon-dev
+          - python3
+          - stow
+          - alacritty 
+          # zsh
+          - zsh
+          - fzf
+          # tmux
+          - tmux
     # Install local script
     - name: Install eza
       script: "{{item}}"
       with_items:
-        - htop
-        - curl
-        - wget
-        - unzip
-        - fontconfig
-        # alacritty dependency
-        - cmake 
-        - g++ 
-        - pkg-config 
-        - libfreetype6-dev 
-        - libfontconfig1-dev 
-        - libxcb-xfixes0-dev 
-        - libxkbcommon-dev
-        - python3
-        - stow
-        # zsh
-        - zsh
-        - fzf
-        # tmux
-        - tmux
         - "./lazygit_install.sh"
         - "./eza_install.sh"
         - "./node_install.sh"
