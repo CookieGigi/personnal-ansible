@@ -10,7 +10,9 @@
 
 - name: Install eza
   become: true
-  script: "./eza_install.sh" 
+  script: 
+    cmd: "./eza_install.sh" 
+    creates: /usr/bin/eza
 
 - name: Install zoxide
   include_role: 
