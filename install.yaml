@@ -91,6 +91,16 @@
         - "./eza_install.sh"
         - "./node_install.sh"
 
+
+
+    # Install from remote script
+    - name: Install from remote script
+      include_tasks: install_sh.yaml 
+      with_items:
+        - name: zoxide
+          url: https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
+          pathcommand: zoxide
+          arg: ""
     # Dotfile
     - name: Clone dotfile directory 
       ansible.builtin.git:
