@@ -49,4 +49,7 @@
     - role: android
       tags:
         - android
+    - role: obsidian
+      tags:
+        - obsidian
 
