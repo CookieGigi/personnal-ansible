@@ -5,6 +5,17 @@
     #   apt_repository:
     #     repo: "{{item}}"
     #   with_items:
+    # Update & upgrade
+    - name: Update
+      become: true
+      apt:
+        update-cache: yes
+      ignore_errors: yes
+    - name: Upgrade
+      become: true
+      apt:
+        upgrade: dist
+
     # Package
     - name: Install packages
       become: true
