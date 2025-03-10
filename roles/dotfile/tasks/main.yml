@@ -1,0 +1,10 @@
+- name: "Install Stow"
+  apt:
+    name: "stow"
+- name: Clone dotfile directory 
+  ansible.builtin.git:
+    repo: "https://github.com/CookieGigi/dotfile.git"
+    dest: $HOME/dotfile
+- name: Stow dotfile
+  ansible.builtin.command: stow -d $HOME/dotfile/ .
+
