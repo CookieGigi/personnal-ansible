@@ -1,0 +1,6 @@
+- name: Install Snap Classic Package
+  become: true
+  community.general.snap:
+    classic: true
+    name:
+      - codium
