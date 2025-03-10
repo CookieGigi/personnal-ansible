@@ -9,3 +9,6 @@
     - role: cli-util
       tags:
         - cli-util
+    - role: alacritty
+      tags:
+        - alacritty

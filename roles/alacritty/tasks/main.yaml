@@ -1,0 +1,13 @@
+- name: "Install alacritty and dependencies"
+  apt:
+    name:
+      - cmake 
+      - g++ 
+      - pkg-config 
+      - libfreetype6-dev 
+      - libfontconfig1-dev 
+      - libxcb-xfixes0-dev 
+      - libxkbcommon-dev
+      - python3
+      - stow
+      - alacritty
