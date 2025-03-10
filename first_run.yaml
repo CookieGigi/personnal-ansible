@@ -30,4 +30,7 @@
     - role: dotnet
       tags:
         - dotnet
+    - role: pipx
+      tags:
+        - pipx
 
