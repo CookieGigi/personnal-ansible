@@ -1,0 +1,11 @@
+- name: "Install tlp"
+  become: true
+  apt:
+    name: 
+      - tlp
+      - tlp-rdw
+
+- name: Start tlp
+  become: true
+  command: sudo tlp start
+

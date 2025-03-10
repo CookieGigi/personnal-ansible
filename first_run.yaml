@@ -1,4 +1,5 @@
 - hosts: localhost
+  become: true
   roles:
     - role: base
       tags:
@@ -36,4 +37,7 @@
     - role: neovim
       tags: 
         - neovim
+    - role: tlp
+      tags:
+        tlp
 
