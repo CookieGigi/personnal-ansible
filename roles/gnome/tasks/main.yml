@@ -42,12 +42,16 @@
     - gnome
 - name: install extensions
   become: true
-  script: ./gnome_extensions_install.sh
+  script: gnome_extensions_install.sh
   tags:
     - gnome
 - name: enable extensions
+  become: true
   dconf:
     key: "/org/gnome/shell/enabled-extensions"
-    value: "['ding@rastersoft.com', 'ubuntu-dock@ubuntu.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']"
-  tags:
-    - gnome    
+    value: "['ding@rastersoft.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com']"
+- name: disable extensions
+  become: true
+  dconf:
+    key: "/org/gnome/shell/disabled-extensions"
+    value: " ['tiling-assistant@ubuntu.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'ubuntu-dock@ubuntu.com']"
