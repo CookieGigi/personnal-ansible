@@ -113,15 +113,6 @@
         dest: $HOME/dotfile
     - name: Stow dotfile
       ansible.builtin.command: stow -d $HOME/dotfile/ .
-    
-    # Install from script
-    - name: Install from script
-      include_tasks: install_sh.yaml
-      with_items:
-        - name: cargo
-          url: https://sh.rustup.rs 
-          arg: -y
-          pathcommand: $HOME/.cargo/bin/cargo
         
     # Cargo packages
     - name: Cargo packages
