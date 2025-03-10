@@ -121,6 +121,8 @@
         name:
           - alacritty
           - zoxide
+          - tree-sitter-cli
+          - htmx-lsp
         locked: true
     
     # Oh my zsh
