@@ -30,6 +30,7 @@
         - tmux
         - "./lazygit_install.sh"
         - "./eza_install.sh"
+        - "./node_install.sh"
 
     # Dotfile
     - name: Clone dotfile directory 
