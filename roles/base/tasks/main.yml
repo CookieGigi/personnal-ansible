@@ -1,0 +1,22 @@
+# Repository
+# - name: Add Repositries
+#   apt_repository:
+#     repo: "{{item}}"
+#   with_items:
+# Update & upgrade
+
+# Package
+- name: Install packages
+  become: true
+  apt: 
+    name: 
+      - htop
+      - curl
+      - wget
+      - unzip
+      - gpg
+      - software-properties-common
+      - build-essential
+      - tar
+      - rclone
+      - rsync
