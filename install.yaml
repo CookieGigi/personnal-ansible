@@ -26,6 +26,15 @@
           - wget
           - unzip
           - fontconfig
+          - gpg
+          - software-properties-common
+          - build-essential
+          - libreadline-dev 
+          - libssl-dev
+          - ripgrep
+          - tar
+          - xclip
+          - rclone
           # alacritty
           - cmake 
           - g++ 
@@ -42,6 +51,23 @@
           - fzf
           # tmux
           - tmux
+          # neovim
+          - luarocks
+          - fd-find
+          # dotnet
+          - dotnet-sdk-8.0
+          # tlp
+          - tlp
+          - tlp-rdw
+          # gnome
+          - gnome-shell-extensions
+          - gnome-shell-extension-manager
+          # flatpak
+          - flatpak
+          - gnome-software-plugin-flatpak
+          # android debug
+          - adb
+
     # Install local script
     - name: Install eza
       script: "{{item}}"
