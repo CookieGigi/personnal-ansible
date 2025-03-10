@@ -28,6 +28,7 @@
         - fzf
         # tmux
         - tmux
+        - "./lazygit_install.sh"
         - "./eza_install.sh"
 
     # Dotfile
