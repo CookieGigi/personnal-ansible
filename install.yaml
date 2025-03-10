@@ -138,6 +138,12 @@
         - "@tailwindcss/language-server"
 
         
+    # Dotnet package
+    - name: Dotnet Package
+      command: "dotnet tool install --global {{item}}"
+      ignore_errors: yes
+      with_items:
+        - csharp-ls
     # Oh my zsh
     - name: Clone oh my zsh
       ansible.builtin.git:
