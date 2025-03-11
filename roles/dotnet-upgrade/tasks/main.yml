@@ -1,0 +1,4 @@
+- name: "Update dotnet global tool"
+  command: "dotnet tool update -g {{item}}"
+  with_items:
+    - csharp-ls

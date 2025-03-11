@@ -3,3 +3,6 @@
     - role: upgrade 
       tags:
         - upgrade
+    - role: dotnet-upgrade
+      tags:
+        - dotnet-upgrade
