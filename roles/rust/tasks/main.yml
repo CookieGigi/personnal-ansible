@@ -1,0 +1,8 @@
+- name: "Install rust toolchain"
+  include_role: 
+    name: install_from_remote_script 
+  vars:
+    name: cargo
+    url: https://sh.rustup.rs
+    pathcommand: cargo
+    arg: "-sSf"

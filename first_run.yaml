@@ -60,4 +60,7 @@
     - role: tailscale
       tags:
         - tailscale
+    - role: rust 
+      tags:
+        - rust
 
