@@ -1,8 +1,8 @@
 # Install the basic for ansible
 init:
-	make base
+	make setup_ansible 
 
-base:
+setup_ansible:
 	make python
 
 	make ansible
@@ -17,6 +17,6 @@ ansible:
 	pipx ensurepath
 
 # Install with ansible
-install:
+first_run:
 	ansible-galaxy collection install community.general
 	ansible-playbook install.yaml --tags all

@@ -32,7 +32,7 @@ make init
 
 ```
 source ~/.bashrc
-make install
+make first_run
 ```
 
 ### Install linux brew
