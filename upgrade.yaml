@@ -9,3 +9,6 @@
     - role: npm-upgrade
       tags:
         - npm-upgrade
+    - role: snap-upgrade
+      tags:
+        - snap-upgrade

@@ -1,0 +1,3 @@
+- name: "Snap update"
+  become: true
+  command: "sudo snap refresh"
