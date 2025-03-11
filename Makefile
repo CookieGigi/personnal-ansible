@@ -19,4 +19,5 @@ ansible:
 # Install with ansible
 first_run:
 	ansible-galaxy collection install community.general
-	ansible-playbook install.yaml --tags all
+	ansible-playbook -K first_run.yaml --tags all
+
