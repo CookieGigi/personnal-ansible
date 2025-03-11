@@ -6,3 +6,6 @@
     - role: dotnet-upgrade
       tags:
         - dotnet-upgrade
+    - role: npm-upgrade
+      tags:
+        - npm-upgrade
