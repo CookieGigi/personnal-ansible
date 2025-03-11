@@ -21,3 +21,5 @@ first_run:
 	ansible-galaxy collection install community.general
 	ansible-playbook -K first_run.yaml --tags all
 
+upgrade:
+	ansible-playbook -K upgrade.yaml --tags all
