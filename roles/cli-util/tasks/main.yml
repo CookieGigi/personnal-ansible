@@ -25,3 +25,7 @@
     url: https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
     pathcommand: zoxide
     arg: ""
+- name: Install cpc
+  community.general.cargo:
+    name: cpc
+    locked: true
