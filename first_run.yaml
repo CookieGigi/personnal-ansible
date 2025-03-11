@@ -63,4 +63,7 @@
     - role: rust 
       tags:
         - rust
+    - role: docker
+      tags:
+        - docker
 
