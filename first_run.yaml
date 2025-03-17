@@ -66,4 +66,7 @@
     - role: docker
       tags:
         - docker
+    - role: ledger
+      tags:
+        - ledger
 
