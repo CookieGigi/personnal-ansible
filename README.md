@@ -46,3 +46,6 @@ brew install lua-language-server
 ```
 apt update && apt upgrade -y && apt install -y sudo make git && cd ansible/ && make init
 ```
+
+### Backup
+- setup rclone
