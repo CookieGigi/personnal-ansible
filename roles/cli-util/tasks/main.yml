@@ -29,3 +29,7 @@
   community.general.cargo:
     name: cpc
     locked: true
+- name: "Install inotifywait"
+  become: true
+  apt:
+    name: "inotify-tools"
