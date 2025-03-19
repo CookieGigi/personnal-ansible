@@ -33,7 +33,7 @@
     - key: "/org/gnome/shell/extensions/tiling-assistant/overridden-settings"
       value: "'unset'"
     - key: "/org/gnome/shell/extensions/auto-move-windows/application-list"
-      value: "['Alacritty.desktop:1', 'firefox_firefox.desktop:2', 'obsidian_obsidian.desktop:3']"
+      value: "['Alacritty.desktop:1', 'librewolf.desktop:2', 'obsidian_obsidian.desktop:3']"
     - key: "/org/gnome/desktop/a11y.applications/screen-keyboard-enabled"
       value: "false"
 

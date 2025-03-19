@@ -1,0 +1,10 @@
+- name: "extrepo librewolf"
+  become: true
+  command: "sudo extrepo enable librewolf"
+- name: "update apt"
+  include_role:
+    name: "apt-update-cache"
+- name: "Install librewolf"
+  become: true
+  apt:
+    name: "librewolf"

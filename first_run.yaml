@@ -72,4 +72,7 @@
     - role: extrepo
       tags:
         - extrepo
+    - role: librewolf
+      tags:
+        - librewolf
 
