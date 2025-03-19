@@ -1,0 +1,4 @@
+- name: "Install extrepo"
+  become: true
+  apt:
+    name: "extrepo"

@@ -69,4 +69,7 @@
     - role: ledger
       tags:
         - ledger
+    - role: extrepo
+      tags:
+        - extrepo
 
