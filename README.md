@@ -42,6 +42,9 @@ make first_run
 brew install lua-language-server
 ```
 
+### Setup Manually
+- Startup application
+
 ### Command when using docker
 ```
 apt update && apt upgrade -y && apt install -y sudo make git && cd ansible/ && make init
